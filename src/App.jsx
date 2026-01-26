@@ -36,10 +36,6 @@ function App() {
               element={<DevelopmentClusters />}
             />
             <Route
-              path="/Development-Clusters"
-              element={<DevelopmentClusters />}
-            />
-            <Route
               path="/The-Provincial-Development-Council"
               element={<TheProvicialDevelopmentCouncil />}
             />

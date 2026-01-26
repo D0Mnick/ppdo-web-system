@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import logo from "../images/ppdo LOGO.png"; // adjust path if needed
-import { useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   HiHome,
   HiDocumentText,
@@ -15,11 +14,11 @@ import {
   HiDownload,
   HiInformationCircle,
 } from "react-icons/hi";
-import { motion } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import logo from "../images/ppdo LOGO.png"; // adjust path kung iba
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
 
   const menuItems = [
     { name: "Home", href: "/", icon: HiHome },
@@ -60,7 +59,7 @@ export default function Sidebar() {
     { name: "About PPDO", href: "/About-PPDO", icon: HiInformationCircle },
   ];
 
-  // Variants para sa parent (sidebar)
+  // Sidebar animation
   const sidebarVariants = {
     hidden: { x: "-100%" },
     visible: {
@@ -69,15 +68,15 @@ export default function Sidebar() {
         type: "tween",
         duration: 0.3,
         when: "beforeChildren",
-        staggerChildren: 0.1, // bawat menu item delay
+        staggerChildren: 0.08,
       },
     },
   };
 
-  // Variants para sa bawat menu item
+  // Menu item animation
   const menuItemVariants = {
     hidden: { x: -20, opacity: 0 },
-    visible: { x: 0, opacity: 1, transition: { duration: 0.3 } },
+    visible: { x: 0, opacity: 1, transition: { duration: 0.25 } },
   };
 
   return (
@@ -92,7 +91,7 @@ export default function Sidebar() {
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <div className="flex items-center ml-5 gap-2">
+        <div className="flex items-center ml-3 gap-2">
           <img
             src={logo}
             alt="Northern Samar PPDO Logo"
@@ -113,32 +112,32 @@ export default function Sidebar() {
       >
         <nav className="p-4 space-y-1 h-full overflow-y-auto">
           {menuItems.map((item) => {
-            const isActive = location.pathname === item.href;
             const Icon = item.icon;
 
             return (
-              <motion.a
-                key={item.name}
-                variants={menuItemVariants}
-                href={item.href}
-                className={`
-                flex items-center gap-3 px-4 py-2 rounded-lg transition
-                ${
-                  isActive
-                    ? "bg-gray-700 border-l-4 border-blue-500 pl-3"
-                    : "hover:bg-gray-700"
-                }
-              `}
-              >
-                <Icon className="text-lg shrink-0" />
-                <span className="text-sm">{item.name}</span>
-              </motion.a>
+              <motion.div key={item.name} variants={menuItemVariants}>
+                <NavLink
+                  to={item.href}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) => `
+                    flex items-center gap-3 px-4 py-2 rounded-lg transition
+                    ${
+                      isActive
+                        ? "bg-gray-700 border-l-4 border-blue-500 pl-3"
+                        : "hover:bg-gray-700"
+                    }
+                  `}
+                >
+                  <Icon className="text-lg shrink-0" />
+                  <span className="text-sm">{item.name}</span>
+                </NavLink>
+              </motion.div>
             );
           })}
         </nav>
       </motion.aside>
 
-      {/* OVERLAY (ALL SIZES) */}
+      {/* OVERLAY */}
       {open && (
         <div
           onClick={() => setOpen(false)}
