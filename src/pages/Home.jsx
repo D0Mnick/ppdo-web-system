@@ -11,7 +11,7 @@ import logo7 from "../images/pdf.png";
 import logo8 from "../images/basicFacts.png";
 import logo9 from "../images/hco.jpg";
 import logo10 from "../images/serbisyo.jpg";
-import logo11 from "../images/family.jpg";
+
 import { FaArrowDown, FaArrowRight } from "react-icons/fa"; // npm install react-icons
 import Footer from "../layout/Footer";
 import { motion } from "framer-motion";

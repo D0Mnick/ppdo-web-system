@@ -30,34 +30,34 @@ export default function Sidebar() {
     },
     { name: "News & Events", href: "/News-Events", icon: HiNewspaper },
     { name: "Maps", href: "/maps", icon: HiMap },
-    { name: "Data & Statistics", href: "/Data & Statistics", icon: HiChartBar },
+    { name: "Data & Statistics", href: "/Data-Statistics", icon: HiChartBar },
     {
       name: "Programs & Projects",
-      href: "/Programs & Projects",
+      href: "/Programs-Projects",
       icon: HiBriefcase,
     },
     {
       name: "Development Clusters",
-      href: "/Development Clusters",
+      href: "/Development-Clusters",
       icon: HiCollection,
     },
     {
       name: "The Provincial Development Council",
-      href: "/The Provincial Development Council",
+      href: "/The-Provincial-Development-Council",
       icon: HiUsers,
     },
     {
       name: "Local Special Bodies & Secretariat Services",
-      href: "/Local Special Bodies & Secretariat Services",
+      href: "/Local-Special-Bodies-Secretariat-Services",
       icon: HiOfficeBuilding,
     },
     {
       name: "Partners & Stakeholders",
-      href: "/Partners & Stakeholders",
+      href: "/Partners-Stakeholders",
       icon: HiUsers,
     },
     { name: "Downloads", href: "/Downloads", icon: HiDownload },
-    { name: "About PPDO", href: "/About PPDO", icon: HiInformationCircle },
+    { name: "About PPDO", href: "/About-PPDO", icon: HiInformationCircle },
   ];
 
   // Variants para sa parent (sidebar)

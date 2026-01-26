@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../images/ppdoCover.png";
+import heroImage from "../images/maps.png";
 import maps from "../images/Northern Samar Map.png";
 import { motion } from "framer-motion";
 // import plansPDF from "../pdf/pdfpfp24.pdf";

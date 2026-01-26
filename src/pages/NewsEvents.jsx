@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../images/ppdoCover.png";
+import heroImage from "../images/news.png";
 import apply from "../images/application.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../images/ppdoCover.png";
+import heroImage from "../images/planDevelopment.png";
 
 import Footer from "../layout/Footer";
 // import plansPDF from "../pdf/pdfpfp24.pdf";
