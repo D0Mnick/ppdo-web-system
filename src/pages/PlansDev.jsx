@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import heroImage from "../images/ppdoCover.png";
 
 import Footer from "../layout/Footer";
-import plansPDF from "../pdf/pdfpfp24.pdf";
+// import plansPDF from "../pdf/pdfpfp24.pdf";
 
 export default function PlansDev() {
   return (
@@ -91,7 +91,8 @@ export default function PlansDev() {
               />
               <div className="p-5 sm:p-6 flex flex-col flex-1">
                 <a
-                  href={plansPDF}
+                  //   href={plansPDF}
+                  href="/pdf/pdfpfp24.pdf" //
                   download
                   className="mt-auto inline-flex items-center justify-center w-full sm:w-auto bg-sky-700 hover:bg-sky-800 text-white font-medium py-3 px-6 rounded-xl transition"
                 >
