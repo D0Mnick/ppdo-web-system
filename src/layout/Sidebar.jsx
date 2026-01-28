@@ -16,6 +16,7 @@ import {
 } from "react-icons/hi";
 import { Menu, X } from "lucide-react";
 import logo from "../images/ppdo LOGO.png"; // adjust path kung iba
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   const [open, setOpen] = useState(false);
@@ -91,16 +92,18 @@ export default function Sidebar() {
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        <div className="flex items-center ml-3 gap-2">
-          <img
-            src={logo}
-            alt="Northern Samar PPDO Logo"
-            className="h-8 w-8 object-contain"
-          />
-          <h1 className="font-semibold whitespace-nowrap">
-            Northern Samar PPDO
-          </h1>
-        </div>
+        <Link to="/">
+          <div className="flex items-center ml-3 gap-2 cursor-pointer hover:opacity-80 transition">
+            <img
+              src={logo}
+              alt="Northern Samar PPDO Logo"
+              className="h-8 w-8 object-contain"
+            />
+            <h1 className="font-semibold whitespace-nowrap">
+              Northern Samar PPDO
+            </h1>
+          </div>
+        </Link>
       </div>
 
       {/* SIDEBAR */}
