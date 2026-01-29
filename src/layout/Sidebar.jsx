@@ -56,7 +56,7 @@ export default function Sidebar() {
       href: "/Partners-Stakeholders",
       icon: HiUsers,
     },
-    { name: "Downloads", href: "/Downloads", icon: HiDownload },
+    { name: "Downloads", href: "/downloads", icon: HiDownload },
     { name: "About PPDO", href: "/About-PPDO", icon: HiInformationCircle },
   ];
 

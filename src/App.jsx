@@ -12,8 +12,10 @@ import DevelopmentClusters from "./pages/DevelopmentClusters";
 import TheProvicialDevelopmentCouncil from "./pages/TheProvicialDevelopmentCouncil";
 import LocalSpecialBodies from "./pages/LocalSpecialBodies";
 import PartnersStakeHolders from "./pages/PartnersStakeHolders";
-import { Download } from "lucide-react";
+
 import AboutPpdo from "./pages/AboutPpdo";
+import NewsList from "./pages/NewsList";
+import Downloads from "./pages/Download";
 
 function App() {
   return (
@@ -50,9 +52,10 @@ function App() {
               element={<PartnersStakeHolders />}
             />
 
-            <Route path="/Downloads" element={<Download />} />
+            <Route path="/downloads" element={<Downloads />} />
 
             <Route path="/About-PPDO" element={<AboutPpdo />} />
+            <Route path="/news" element={<NewsList />} />
 
             <Route path="*" element={<h1>404 Page Not Found</h1>} />
           </Routes>
